@@ -183,7 +183,7 @@ def prepare_add_verification_attributes(args):
     if args.username:
         result[VerificationFlags.Username] = args.username
     if args.hostname:
-        result[VerificationFlags.Hostname] = args.hostname
+        result[VerificationFlags.MachineHostname] = args.hostname
     return result
 
 
