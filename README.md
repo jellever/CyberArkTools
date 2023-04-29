@@ -5,7 +5,7 @@ Research: https://research.nccgroup.com/2021/10/08/reverse-engineering-and-decry
 
 ## Verification Flag Breakdown
 Vendor Documentation: https://docs.cyberark.com/Product-Doc/OnlineHelp/PAS/Latest/en/Content/PASIMP/CreateCredFile-Utility.htm#CreateCredFileparameters
-### Application Type (--appname)
+### Application Type (--apptype)
 This restriction limits what application types are able to use the .cred file. The options for this are: 
 - CPM
 - PVWA
@@ -26,7 +26,7 @@ This restriction limits what application types are able to use the .cred file. T
 Source: https://docs.cyberark.com/Product-Doc/OnlineHelp/PAS/11.3/en/Content/PASIMP/CreateCredFile-Utility.htm
 
 ### OS Username (--username)
-The name of the user who can use this file. Typically specified in "domain\username" format. Example: SYSTEM -> "nt authority\system". This will normally also be a specific user created in the vault for initial setup purposes.
+The name of the user who can use this file. Typically specified in "domain\username" format. Example: SYSTEM -> "nt authority\system". This will normally also be a specific user created in the vault for initial setup purposes. In some cases, this user can be cyberark specific and will not exist on the Active Directory domain.
 
 ### Executable Path (--exepath)
 Full path to the executable that is using the file.
